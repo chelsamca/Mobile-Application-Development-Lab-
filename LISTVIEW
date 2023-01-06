@@ -1,0 +1,39 @@
+package com.example.sjcet.listview;
+
+import android.content.ClipData;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        onCreateView();
+
+    }
+    public boolean onContextItemSelected(MenuItem item) {
+        return super.onContextItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.melbourine:
+                Toast.makeText(getApplicationContext(), "melbourine clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.vienne:
+                Toast.makeText(getApplicationContext(), "vienne clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.vancover:
+                Toast.makeText(getApplicationContext(), "vancover clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.toronto:
+                Toast.makeText(getApplicationContext(), "toronto clicked", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+        }
+        return super.onContextItemSelected(item);
+
+    }
+    }
+
